@@ -1,0 +1,11 @@
+body {
+  font-family: "helvetica neue";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#thing {
+  max-width: 512px;
+}
+
