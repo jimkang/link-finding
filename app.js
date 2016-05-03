@@ -1,7 +1,7 @@
 var director = require('director');
 
 var routes = {
-  '/thing/:imgurl': renderImage,
+  '/thing/:imgurl/desc/:desc': renderImage,
   // '/concept/:concept': getConcept
 };
 
@@ -11,8 +11,9 @@ var routes = {
   router.init();
 })()))))));
 
-function renderImage(imgurl) {
+function renderImage(imgurl, desc) {
   var thingImg = document.querySelector('#thing');
   var imgSrc = decodeURIComponent(imgurl);
   thingImg.src = imgSrc;
+  thingImg.alt = decodeURIComponent(desc);
 }
