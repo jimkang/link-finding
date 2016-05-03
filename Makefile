@@ -8,8 +8,12 @@ run:
 	wzrd app.js:index.js -- \
 		-d
 
-build:
+build: css
 	$(BROWSERIFY) app.js | $(UGLIFY) -c -m -o index.js
 
 pushall:
 	git push origin gh-pages
+
+# You need to `npm install -g myth`.
+css:
+	myth app-src.css app.css
