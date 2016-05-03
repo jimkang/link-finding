@@ -40,6 +40,10 @@ function resizePage() {
   
   var pageHeight = thingImg.clientHeight + linkImg.clientHeight;
 
+  var html = document.querySelector('html');
+
   document.body.style.width = pageWidth;
   document.body.style.height = pageHeight;
+  html.style.width = pageWidth;
+  html.style.height = pageHeight;
 }
