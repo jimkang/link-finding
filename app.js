@@ -1,4 +1,5 @@
 var director = require('director');
+var probable = require('probable');
 
 var linkMarginLeft = 32;
 
@@ -23,6 +24,11 @@ function renderImage(imgurl, desc, shouldTrim) {
   var imgSrc = decodeURIComponent(imgurl);
   thingImg.src = imgSrc;
   thingImg.alt = decodeURIComponent(desc);
+
+  if (probable.roll(10) === 0) {
+    var linkImg = document.querySelector('#link');
+    linkImg.src = 'static/link-both-arms-up.png';
+  }
 
   if (shouldTrim) {
     setTimeout(resizePage, 500);
