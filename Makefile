@@ -4,7 +4,7 @@ UGLIFY = node_modules/.bin/uglifyjs
 test:
 	node tests/basictests.js
 
-run:
+run: css
 	wzrd app.js:index.js -- \
 		-d
 

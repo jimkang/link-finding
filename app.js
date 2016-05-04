@@ -9,6 +9,25 @@ var routes = {
   // '/concept/:concept': getConcept
 };
 
+var bgStyleTable = probable.createTableFromDef({
+  '0-59': 'background-white',
+  '60-89': 'background-black',
+  '90-99': 'background-overworld'
+});
+
+var sceneryTable = probable.createTableFromDef({
+  '0-24': 'fires',
+  '25-29': 'grave',
+  '30-39': 'woods-a',
+  '40-44': 'woods-b',
+  '45-47': 'woods-c',
+  '48-49': 'grumble',
+  '50-54': 'old-man-cave',
+  '55-59': 'old-woman-cave',
+  '60-74': 'shop',
+  '75-76': 'fairy-pool'
+});
+
 (((((((function go() {
   var router = director.Router(routes);
   // router.notfound = getRandom; 
@@ -20,6 +39,11 @@ function renderImageWithTrim(imgurl, desc) {
 }
 
 function renderImage(imgurl, desc, shouldTrim) {
+  setBackgroundStyle();
+  if (probable.roll(5) === 0) {
+    showScenery();
+  }
+
   var thingImg = document.querySelector('#thing');
   var imgSrc = decodeURIComponent(imgurl);
   thingImg.src = imgSrc;
@@ -52,4 +76,14 @@ function resizePage() {
   document.body.style.height = pageHeight;
   html.style.width = pageWidth;
   html.style.height = pageHeight;
+}
+
+function setBackgroundStyle() {
+  document.body.classList.add(bgStyleTable.roll());
+}
+
+function showScenery() {
+  var sceneryId = sceneryTable.roll();
+  var scenery = document.getElementById(sceneryId);
+  scenery.classList.remove('hide');
 }

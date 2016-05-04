@@ -15,6 +15,126 @@ body {
   margin-left: 32px;
 }
 
-.dungeon-background {
+.background-white {
+  background-color: white;
+}
 
+.background-black {
+  background-color: black;
+}
+
+.background-overworld {
+  background-color: #fedbab;
+}
+
+.hide {
+  display: none;
+}
+
+#left-fire {
+  position: absolute;
+  left: 20px;
+  bottom: 5px;
+}
+
+#right-fire {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+}
+
+#grave {
+  position: absolute;
+  left: 20%;
+  bottom: 5px;
+}
+
+#green-tree-1 {
+  position: absolute;
+  bottom: 69px;
+  left: 5px;
+}
+
+#green-tree-2 {
+  position: absolute;
+  bottom: 5px;
+  left: 133px;
+}
+
+#green-tree-3 {
+  position: absolute;
+  bottom: 69px;
+  right: 5px;
+}
+
+#autumn-tree-1 {
+  position: absolute;
+  bottom: 69px;
+  left: 5px;
+}
+
+#autumn-tree-2 {
+  position: absolute;
+  bottom: 5px;
+  right: 133px;
+}
+
+#autumn-tree-3 {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+#grave-tree {
+  position: absolute;
+  bottom: 69px;
+  left: 5px;
+}
+
+#woods-grave {
+  position: absolute;
+  right: 15%;
+  bottom: 5px;
+}
+
+#grumble-grumble {
+  position: absolute;
+  left: 64px;
+  bottom: 5px;
+}
+
+#grumble-fire {
+  position: absolute;
+  right: 64px;
+  bottom: 5px;
+}
+
+#old-man {
+  position: absolute;
+  left: 96px;
+  bottom: 5px;
+}
+
+#old-woman {
+  position: absolute;
+  right: 96px;
+  bottom: 5px;
+}
+
+#old-woman-fire {
+  position: absolute;
+  left: 64px;
+  bottom: 5px;
+}
+
+#buy-somethin {
+  position: absolute;
+  right: 96px;
+  bottom: 5px;  
+}
+
+#fairy {
+  position: absolute;
+  bottom: 40%;
+  left: 25%;
 }
