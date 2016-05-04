@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+.flipped {
+  transform: rotate(180deg);
+}
+
 #thing {
   max-width: 512px;
 }

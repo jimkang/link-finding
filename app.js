@@ -49,6 +49,10 @@ function renderImage(imgurl, desc, shouldTrim) {
   thingImg.src = imgSrc;
   thingImg.alt = decodeURIComponent(desc);
 
+  if (probable.roll(8) === 0) {
+    thingImg.classList.add('flipped');
+  }
+
   if (probable.roll(10) === 0) {
     var linkImg = document.querySelector('#link');
     linkImg.src = 'static/link-both-arms-up.png';
