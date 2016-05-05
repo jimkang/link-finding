@@ -5,6 +5,7 @@ var linkMarginLeft = 32;
 
 var routes = {
   '/thing/:imgurl/desc/:desc': renderImage,
+  '/thing/:imgurl/desc/:desc/width/:width/height/:height': renderImageRespectingSize,
   '/thing/:imgurl/desc/:desc/trim/': renderImageWithTrim,
   // '/concept/:concept': getConcept
 };
@@ -38,9 +39,14 @@ function renderImageWithTrim(imgurl, desc) {
   renderImage(imgurl, desc, true);
 }
 
-function renderImage(imgurl, desc, shouldTrim) {
+function renderImageRespectingSize(imgurl, desc, thingWidth, thingHeight) {
+  renderImage(imgurl, desc, false, thingWidth, thingHeight);
+}
+
+function renderImage(imgurl, desc, shouldTrim, thingWidth, thingHeight) {
   setBackgroundStyle();
-  if (probable.roll(5) === 0) {
+
+  if (thingWidth > 400 && probable.roll(5) === 0) {
     showScenery();
   }
 
