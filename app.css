@@ -28,10 +28,12 @@ body {
 
 #thing {
   max-width: 512px;
+  z-index: 20;
 }
 
 #link {
   margin-left: 32px;
+  z-index: 10;
 }
 
 .background-white {
@@ -120,6 +122,7 @@ body {
   position: absolute;
   left: 64px;
   bottom: 5px;
+  z-index: 2;
 }
 
 #grumble-fire {
@@ -132,12 +135,14 @@ body {
   position: absolute;
   left: 96px;
   bottom: 5px;
+  z-index: 2;
 }
 
 #old-woman {
   position: absolute;
   right: 96px;
   bottom: 5px;
+  z-index: 2;
 }
 
 #old-woman-fire {
@@ -150,10 +155,12 @@ body {
   position: absolute;
   right: 96px;
   bottom: 5px;
+  z-index: 2;
 }
 
 #fairy {
   position: absolute;
   bottom: 40%;
   left: 25%;
+  z-index: 2;
 }
