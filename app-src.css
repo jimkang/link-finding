@@ -22,11 +22,11 @@ body {
 }
 
 .background-white {
-  background-color: white;
+  background-color: hsl(50, 10%, 90%);
 }
 
 .background-black {
-  background-color: black;
+  background-color: hsl(250, 10%, 20%);
 }
 
 .background-overworld {

@@ -11,9 +11,9 @@ var routes = {
 };
 
 var bgStyleTable = probable.createTableFromDef({
-  '0-59': 'background-white',
-  '60-89': 'background-black',
-  '90-99': 'background-overworld'
+  '0-39': 'background-white',
+  '40-74': 'background-black',
+  '75-99': 'background-overworld'
 });
 
 var sceneryTable = probable.createTableFromDef({
