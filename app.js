@@ -51,9 +51,7 @@ function renderImage(imgurl, desc, shouldTrim, thingWidth, thingHeight) {
   }
 
   var thingImg = document.querySelector('#thing');
-  var imgSrc = decodeURIComponent(imgurl);
-  thingImg.src = imgSrc;
-  thingImg.alt = decodeURIComponent(desc);
+  thingImg.onload = reportImageLoaded;
 
   if (probable.roll(8) === 0) {
     thingImg.classList.add('flipped');
@@ -63,6 +61,10 @@ function renderImage(imgurl, desc, shouldTrim, thingWidth, thingHeight) {
     var linkImg = document.querySelector('#link');
     linkImg.src = 'static/link-both-arms-up.png';
   }
+
+  thingImg.alt = decodeURIComponent(desc);
+  var imgSrc = decodeURIComponent(imgurl);
+  thingImg.src = imgSrc;
 
   if (shouldTrim) {
     setTimeout(resizePage, 500);
@@ -96,4 +98,11 @@ function showScenery() {
   var sceneryId = sceneryTable.roll();
   var scenery = document.getElementById(sceneryId);
   scenery.classList.remove('hide');
+}
+
+function reportImageLoaded() {
+  console.log('Thing image loaded!');
+  if (typeof window.callPhantom === 'function') {
+    window.callPhantom('takeShot');
+  }
 }
