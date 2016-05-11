@@ -102,6 +102,10 @@ function showScenery() {
 
 function reportImageLoaded() {
   console.log('Thing image loaded!');
+  setTimeout(waveToPhantom, 1000);
+}
+
+function waveToPhantom() {
   if (typeof window.callPhantom === 'function') {
     window.callPhantom('takeShot');
   }
