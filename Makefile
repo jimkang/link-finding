@@ -1,6 +1,7 @@
 BROWSERIFY = browserify
 UGLIFY = node_modules/.bin/uglifyjs
 LAST_SHA = $(shell git rev-parse HEAD)
+MYTH = node_modules/.bin/myth
 
 test:
 	node tests/basictests.js
@@ -16,6 +17,5 @@ build: css
 pushall: build
 	git push origin gh-pages
 
-# You need to `npm install -g myth`.
 css:
-	myth app-src.css app.css
+	$(MYTH) app-src.css app.css

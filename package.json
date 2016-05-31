@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jimkang/link-finding",
   "devDependencies": {
+    "myth": "^1.0.4",
     "uglify-js": "^2.4.17"
   },
   "dependencies": {
